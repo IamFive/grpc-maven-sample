@@ -31,6 +31,10 @@
 
 package io.grpc.examples.experimental;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
+
 import com.google.common.util.concurrent.Uninterruptibles;
 
 import io.grpc.CallOptions;
@@ -44,10 +48,6 @@ import io.grpc.examples.helloworld.GreeterGrpc;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.examples.helloworld.HelloResponse;
 import io.grpc.internal.GrpcUtil;
-
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 /**
  * A simple client that requests a greeting from the
